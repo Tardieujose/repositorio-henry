@@ -58,7 +58,12 @@ function dePalabrasAFrase(palabras) {
   // con espacios entre cada palabra
   // Ejemplo: ['Hello', 'world!'] -> 'Hello world!'
   // Tu código:
-  
+  var a;
+  a = palabras[0];
+for(let i = 1; i < palabras.length; i++){
+   a = a + ' ' + palabras[i];
+}return a;
+
 }
 
 
@@ -66,6 +71,7 @@ function arrayContiene(array, elemento) {
   // Comprueba si el elemento existe dentro de "array"
   // Devuelve "true" si está, o "false" si no está
   // Tu código:
+  return array.includes(elemento);
 }
 
 
@@ -73,6 +79,8 @@ function agregarNumeros(numeros) {
   // "numeros" debe ser un arreglo de enteros (int/integers)
   // Suma todos los enteros y devuelve el valor
   // Tu código:
+  var total;
+  return total = numeros.reduce((a, b) => a + b, 0);
 }
 
 
@@ -80,6 +88,11 @@ function promedioResultadosTest(resultadosTest) {
   // "resultadosTest" debe ser una matriz de enteros (int/integers)
   // Itera (en un bucle) los elementos del array, calcula y devuelve el promedio de puntajes
   // Tu código:
+  //var total;
+  //total = resultadosTest.reduce((a, b) => a + b, 0);
+  var total;
+  total = resultadosTest.reduce((a, b) => a + b, 0);
+  return total / resultadosTest.length;
 }
 
 
@@ -87,6 +100,9 @@ function numeroMasGrande(numeros) {
   // "numeros" debe ser una matriz de enteros (int/integers)
   // Devuelve el número más grande
   // Tu código:
+  var a;
+  a = Math.max.apply(null, numeros);
+  return a;
 }
 
 
@@ -94,13 +110,25 @@ function multiplicarArgumentos() {
   // Usa la palabra clave `arguments` para multiplicar todos los argumentos y devolver el producto
   // Si no se pasan argumentos devuelve 0. Si se pasa un argumento, simplemente devuélvelo
   // Escribe tu código aquí:
+  if (arguments[0] == undefined) return 0;
+  let resultado = 1;
+  for (let i = 0; i <= arguments.length - 1; i++) {
+    resultado = resultado * arguments[i];
+  }
+  return resultado;
 }
 
 
 function cuentoElementos(arreglo){
   //Realiza una función que retorne la cantidad de los elementos del arreglo cuyo valor es mayor a 18.
   //Escribe tu código aquí
-
+  var cont = 0;
+  for (let i = 0; i < arreglo.length; i++){
+       if(arreglo[i] > 18 ){
+       cont = cont + 1;
+    }return cont;
+ }
+   
 }
 
 
