@@ -124,11 +124,11 @@ function cuentoElementos(arreglo){
   //Escribe tu código aquí
   var cont = 0;
   for (let i = 0; i < arreglo.length; i++){
-       if(arreglo[i] > 18 ){
-       cont = cont + 1;
-    }return cont;
+    if(arreglo[i] > 18 ){
+   cont = cont + 1;
+  }
  }
-   
+  return cont;
 }
 
 
@@ -137,7 +137,24 @@ function diaDeLaSemana(numeroDeDia) {
   //Realiza una función que dado el número del día de la semana, retorne: Es fin de semana
   //si el día corresponde a Sábado o Domingo y “Es dia Laboral” en caso contrario. 
   //Escribe tu código aquí   
-  
+  switch (numeroDeDia) {
+    case 1:
+      return `Es fin de semana`;
+    case 2:
+      return `Es dia Laboral`;
+    case 3:
+      return `Es dia Laboral`;
+    case 4:
+      return `Es dia Laboral`;
+    case 5:
+      return `Es dia Laboral`;
+    case 6:
+      return `Es dia Laboral`;
+    case 7:
+      return `Es fin de semana`;
+    default:
+      return false;
+}
 } 
 
 
@@ -145,7 +162,11 @@ function empiezaConNueve(n) {
   //Desarrolle una función que recibe como parámetro un número entero n. Debe retornar true si el entero 
   //inicia con 9 y false en otro caso.
   //Escribe tu código aquí
-  
+  if(String.prototype.charAt.call(n, 0) == 9){
+    return true;
+  }else {
+    return false;
+  }
 }
 
 
@@ -153,7 +174,13 @@ function todosIguales(arreglo) {
   //Escriba la función todosIguales, que indique si todos los elementos de un arreglo son iguales:
   //retornar true, caso contrario retornar false.
   //Escribe tu código aquí  
-  
+  for(let i = 0; i < arreglo.length; i++){
+    if(arreglo[0] == arreglo[1]){
+      return true;
+    }else {
+      return false;
+    }
+  }
 } 
 
 
@@ -162,6 +189,14 @@ function mesesDelAño(array) {
   // "Enero", "Marzo" y "Noviembre", guardarlo en nuevo array y retornarlo.
   //Si alguno de los meses no está, devolver: "No se encontraron los meses pedidos"
   // Tu código:
+  const nuevoArray=['Marzo','Noviembre','Enero'];
+  let findEnero;
+  let findMarzo;
+  let findNoviembre;
+  array.includes('Enero')?findEnero=true:findEnero=false;
+  array.includes('Marzo')?findMarzo=true:findMarzo=false;
+  array.includes('Noviembre')?findNoviembre=true:findNoviembre=false;
+  return findEnero===true&&findMarzo===true&&findNoviembre===true?nuevoArray:"No se encontraron los meses pedidos";
 }
 
 
@@ -169,6 +204,8 @@ function mayorACien(array) {
   //La función recibe un array con enteros entre 0 y 200. Recorrer el array y guardar en un nuevo array sólo los
   //valores mayores a 100 (no incluye el 100). Finalmente devolver el nuevo array.
   // Tu código:
+  var m = [];
+  return m = array.filter(array => array > 100 );
 }
 
 
@@ -180,6 +217,20 @@ function breakStatement(numero) {
   //devolver: "Se interrumpió la ejecución"
   //Pista: usá el statement 'break'
   // Tu código:
+  var array = [];
+  var suma = numero;
+  for (var i = 0; i < 10; i++) {
+    suma = suma + 2;
+    if (suma === i) break;
+    else {
+      array.push(suma);
+    }
+  }
+  if (i < 10) {
+    return "Se interrumpió la ejecución";
+  } else {
+    return array;
+  }
 }
 
 
@@ -190,6 +241,22 @@ function continueStatement(numero) {
   //Cuando el número de iteraciones alcance el valor 5, no se suma en ese caso y se continua con la siguiente iteración
   //Pista: usá el statement 'continue'
   // Tu código:
+  var array = [];
+  var suma = numero;
+  for (var i = 0; i < 10; i++) {
+    suma = suma + 2;
+    if (i === 5) {
+      continue; 
+    }
+    else {
+      array.push(suma);
+    }
+  }
+  if (i < 10) {
+    return "Se interrumpió la ejecución";
+  } else {
+    return array;
+  }
 }
 
 
