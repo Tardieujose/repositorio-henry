@@ -244,11 +244,11 @@ function continueStatement(numero) {
   var array = [];
   var suma = numero;
   for (var i = 0; i < 10; i++) {
-    suma = suma + 2;
-    if (i === 5) {
+    if (i === 4) {
       continue; 
     }
     else {
+      suma = suma + 2;
       array.push(suma);
     }
   }
